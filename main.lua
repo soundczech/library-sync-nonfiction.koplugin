@@ -6315,6 +6315,16 @@ function GrimmorySync:buildMissingBookQueue(local_books, remote_books)
         self:saveManifest(manifest)
     end
 
+    -- Library Sync variant patch: the server feed lists newest-added first;
+    -- download oldest first so file timestamps match the order books were added.
+    do
+        local lo, hi = 1, #missing
+        while lo < hi do
+            missing[lo], missing[hi] = missing[hi], missing[lo]
+            lo, hi = lo + 1, hi - 1
+        end
+    end
+
     return missing, manifest
 end
 
