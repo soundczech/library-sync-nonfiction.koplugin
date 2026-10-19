@@ -30,7 +30,7 @@ The plugin was previously distributed as `grimmory-sync.koplugin`. New installat
 | Feature | Grimmory | BookOrbit |
 | --- | --- | --- |
 | All-books OPDS sync | Yes | Yes |
-| Restricted sync sources | Shelves and Magic Shelves | Libraries, Collections, and SmartScopes |
+| Restricted sync sources | Libraries, Shelves, and Magic Shelves | Libraries, Collections, and SmartScopes |
 | Extra genres, tags, and Hardcover IDs | Grimmory API | BookOrbit API |
 | Bookshelf author images | Yes | Yes |
 | Upload local Bookshelf author images | No | Yes |
@@ -143,6 +143,7 @@ Open `Select sync source` to restrict both missing-book sync and metadata refres
 Grimmory exposes:
 
 - All books
+- Libraries
 - Shelves
 - Magic Shelves
 
